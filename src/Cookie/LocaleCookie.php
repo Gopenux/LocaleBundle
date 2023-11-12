@@ -39,7 +39,17 @@ class LocaleCookie
     {
         $value = $locale;
         $expire = $this->computeExpireTime();
-        $cookie = new Cookie($this->name, $value, $expire, $this->path, $this->domain, $this->secure, $this->httpOnly);
+        $cookie = new Cookie(
+            $this->name,
+            $value,
+            $expire,
+            $this->path,
+            $this->domain,
+            $this->secure,
+            $this->httpOnly,
+            false, /** TODO Defined From Value Default In Constructor Cookie Change By Update Symfony 5.x */
+            null /** TODO Defined From Value Default In Constructor Cookie Change By Update Symfony 5.x */
+        );
 
         return $cookie;
     }
