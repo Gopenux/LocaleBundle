@@ -49,7 +49,7 @@ class LocaleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getParent()
+    public function getParent(): string
     {
         return 'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType';
     }
@@ -66,7 +66,7 @@ class LocaleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
         return 'lunetics_locale';
     }
