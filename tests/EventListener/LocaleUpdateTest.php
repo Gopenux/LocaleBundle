@@ -187,7 +187,7 @@ class LocaleUpdateTest extends TestCase
 
     private function getLocaleCookie($updateCookie)
     {
-        $cookie = new LocaleCookie('lunetics_locale', 86400, '/', null, false, true, $updateCookie);
+        $cookie = new LocaleCookie('lunetics_locale', 86400, '/', false, true, $updateCookie, null);
 
         return $cookie;
     }

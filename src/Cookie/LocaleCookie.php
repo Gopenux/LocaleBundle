@@ -19,20 +19,20 @@ class LocaleCookie
     private $name;
     private $ttl;
     private $path;
-    private $domain;
     private $secure;
     private $httpOnly;
     private $setOnChange;
+    private $domain;
 
-    public function __construct($name, $ttl, $path, $domain = null, $secure, $httpOnly, $setOnChange)
+    public function __construct($name, $ttl, $path, $secure, $httpOnly, $setOnChange, $domain = null)
     {
         $this->name = $name;
         $this->ttl = $ttl;
         $this->path = $path;
-        $this->domain = $domain;
         $this->secure = $secure;
         $this->httpOnly = $httpOnly;
         $this->setOnChange = $setOnChange;
+        $this->domain = $domain;
     }
 
     public function getLocaleCookie($locale)

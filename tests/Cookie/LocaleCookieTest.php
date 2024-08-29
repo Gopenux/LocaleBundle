@@ -17,7 +17,7 @@ class LocaleCookieTest extends TestCase
 {
     public function testCookieParamsAreSet()
     {
-        $localeCookie = new LocaleCookie('lunetics_locale', 86400, '/', null, false, true, true);
+        $localeCookie = new LocaleCookie('lunetics_locale', 86400, '/', false, true, true, null);
         $cookie = $localeCookie->getLocaleCookie('en');
         $this->assertTrue($cookie instanceof Cookie);
         $this->assertEquals('lunetics_locale', $cookie->getName());
@@ -30,7 +30,7 @@ class LocaleCookieTest extends TestCase
 
     public function testCookieExpiresDateTime()
     {
-        $localeCookie = new LocaleCookie('lunetics_locale', 86400, '/', null, false, true, true);
+        $localeCookie = new LocaleCookie('lunetics_locale', 86400, '/', false, true, true, null);
         $cookie = $localeCookie->getLocaleCookie('en');
         $this->assertTrue($cookie->getExpiresTime() > time());
         $this->assertTrue($cookie->getExpiresTime() <= (time() + 86400));
